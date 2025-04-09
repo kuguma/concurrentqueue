@@ -10,7 +10,7 @@ add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 target_include_directories(${PROJECT_NAME} 
         INTERFACE 
                 $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>
-                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/>)
+                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
 install(TARGETS ${PROJECT_NAME} 
     EXPORT ${PROJECT_NAME}Targets
@@ -58,7 +58,7 @@ install(
                 lightweightsemaphore.h 
                 LICENSE.md
         DESTINATION 
-                ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/moodycamel
+                ${CMAKE_INSTALL_INCLUDEDIR}
 )
 
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
