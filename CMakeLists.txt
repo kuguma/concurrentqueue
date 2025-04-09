@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.15)
 project(concurrentqueue VERSION 1.0.0)
 
 include(GNUInstallDirs)
@@ -10,7 +10,7 @@ add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 target_include_directories(${PROJECT_NAME} 
         INTERFACE 
                 $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>
-                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/>)
+                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
 install(TARGETS ${PROJECT_NAME} 
     EXPORT ${PROJECT_NAME}Targets
